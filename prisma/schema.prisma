@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Todo {
+  id        String @id @default(uuid())
+  title     String
+  complete  Boolean
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+//The id field is of type String and is marked as the primary key using the @id attribute. It is also set to generate a default value using the uuid() function, which generates a unique identifier for each Todo item. 
+
+//The complete field is of type Boolean and represents the completion status of the Todo item. 
