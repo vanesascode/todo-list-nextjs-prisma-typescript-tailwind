@@ -1,4 +1,5 @@
-It is a To-Do list app made with Next.js, Prisma....
+# My first Next.js App
+It is a todo list using Next.js 13, Prisma for the database, Typescript and Tailwind. Just for learning a little bit all these tools. 
 
 ## SETUP
 
